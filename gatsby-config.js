@@ -9,16 +9,11 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `What The Drums Blog`,
+    title: `What The Drums`,
     subtitle: `Rhythms & Reflections`,
     author: {
       name: `Maarten Mateusen`,
-      summary: `who lives and works in San Francisco building useful things.`,
-    },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      twitter: `kylemathews`,
+      summary: `who lives and works in Belgium. Married, father of 2, drummer, metalhead, boardgamer and lifelong student.`,
     },
   },
   plugins: [
