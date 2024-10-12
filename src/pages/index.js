@@ -76,6 +76,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        subtitle
       }
     }
     allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {

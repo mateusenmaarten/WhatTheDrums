@@ -58,6 +58,11 @@
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+  --vintage-blue: #244855;
+  --vintage-red: #E64833;
+  --vintage-brown: #874F41;
+  --vintage-light-blue: #90AEAD;
+  --vintage-ivory: #FBE9D0;
 }
 
 /* HTML elements */
@@ -81,9 +86,27 @@ body {
   color: var(--color-text);
 }
 
-footer {
-  padding: var(--spacing-6) var(--spacing-0);
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5em;  /* This creates space between all child elements */
 }
+
+.footer > * {
+  margin: 0;  /* Reset any default margins */
+}
+
+/* Existing footer styles */
+footer {
+  flex-shrink: 0;
+  position: relative;
+  padding: var(--spacing-6) var(--spacing-0);
+  background-color: var(--vintage-blue);
+  color: var(--vintage-ivory);
+}
+
 
 hr {
   background: var(--color-accent);
@@ -228,7 +251,7 @@ table thead tr th {
 /* Link */
 
 a {
-  color: var(--color-primary);
+  color: var(--vintage-light-blue);
 }
 
 a:hover,
@@ -239,12 +262,20 @@ a:focus {
 /* Custom classes */
 
 .global-wrapper {
-  margin: var(--spacing-0) auto;
+  flex: 1 0 auto;
+  margin: 0 auto;
   max-width: var(--maxWidth-wrapper);
   padding: var(--spacing-10) var(--spacing-5);
+  background-color: var(--vintage-ivory);
+  width: 100%;
+}
+
+.global {
+  background-color: var(--vintage-ivory);
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
+  max-width: var(--maxWidth-wrapper);
   margin-bottom: var(--spacing-20);
 }
 
@@ -253,8 +284,20 @@ a:focus {
 }
 
 .main-heading {
+  display: flex;
+  justify-content: center;
   font-size: var(--fontSize-7);
   margin: 0;
+  color: var(--vintage-red);
+  padding-top: 2%;
+  width: 100%;
+  background-color: var(--vintage-blue);
+}
+
+.sub-heading {
+  color: var(--vintage-red);
+  display: flex;
+  justify-content: center;
 }
 
 .post-list-item {
@@ -275,13 +318,6 @@ a:focus {
 
 .post-list-item header {
   margin-bottom: var(--spacing-4);
-}
-
-.header-link-home {
-  font-weight: var(--fontWeight-bold);
-  font-family: var(--font-heading);
-  text-decoration: none;
-  font-size: var(--fontSize-2);
 }
 
 .bio {
